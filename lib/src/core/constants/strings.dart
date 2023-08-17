@@ -1,0 +1,39 @@
+const String strLetName = "Let’s Get your Login";
+const String strInfoBelow = "Enter Your information Below";
+const String strEnterEmail = "Enter Email Address";
+const String strEnterPass = "Enter Password";
+const String strForget = "Forget Password";
+const String strLogin = "Login";
+const String strContinue = "  or continue with  ";
+const String strSignup = "Sign Up";
+const String strGetOtp = "Get OTP";
+const String strNotOurMember = "Not Our Member Yet?";
+const String strRegisterNow = "Register Now";
+const String strRegisterNewAc = "Register your new account!";
+const String strEnterName = "Enter Your Name";
+const String strEnterCompany = "Enter Company Name";
+const String strMobNo = "Mobile Number";
+const String strConfirmPass = "Confirm Password";
+const String strEnterAddress = "Enter Address";
+const String strMale = "Male";
+const String strFemale = "Female";
+const String strIdFront = "Upload Govt. ID Proof (Front)";
+const String strIdBack = "Upload Govt. ID Proof (Back)";
+const String strUploadPhoto = "Upload Profile Photo";
+const String strEnterOtp = "Enter OTP Code";
+const String strOtpMo = "OTP code has benn send to (+91) 123 456 7890";
+const String strOtpEmail = "OTP code has benn send to your@gmail.com";
+const String strResendCode = "Resend Code";
+const String strVefiry = "Verify";
+const String strNewPass = "New Password";
+const String strEnterNewPass = "Enter your new Password";
+const String strSave = "Save";
+const String strForgot = "Forgot Password";
+const String strForgotPass = "Select which contact details should we use to reset your password";
+const String strSendCodeSmS = "Send Code Via SMS";
+const String strSendCodeEmail = "Send Code Via Email";
+const String strClear = "Clear";
+const String strAddSign = "Add Signature";
+
+
+
