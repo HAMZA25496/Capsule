@@ -26,5 +26,11 @@ const String strMobileNo = "Mobile Number";
 const String strGender = "Gender";
 const String strSelectClass = "Select Class";
 const String strSubmit = "Submit";
+const String strBannerText = "Explore Your\nKnowledge With\nUs";
+const String strTryIt = "Try it";
+const String strSubjects = "Subjects";
+const String str11 = "11th";
+const String str12 = "12th";
+
 
 

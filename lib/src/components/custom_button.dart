@@ -12,11 +12,13 @@ class CustomButton extends StatelessWidget {
     required this.fontWeight,
     required this.font,
     required this.onPress,
+    this.bgcolor,
   }):super(key:key);
 
 
   final String text;
   final Color color;
+  final Color? bgcolor;
   final FontWeight fontWeight;
   final double font;
   final Function() onPress;
@@ -29,7 +31,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPress,
         style: ButtonStyle(
           backgroundColor: MaterialStatePropertyAll(
-            AppColors.pinkGrade2
+          bgcolor ??  AppColors.pinkGrade2
           ),
           shape: MaterialStatePropertyAll(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius_60)

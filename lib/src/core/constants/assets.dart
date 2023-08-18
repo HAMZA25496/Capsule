@@ -15,5 +15,7 @@ class ImgAssets {
   static const String listNav = '${assets}list2.png';
   static const String uspNav = '${assets}usp.png';
   static const String userNav = '${assets}user2.png';
+  static const String personIllus = '${assets}elluser.png';
+  static const String banner = '${assets}backgrnd.png';
 
 }
