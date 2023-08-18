@@ -8,7 +8,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget  {
    const CustomAppBar({
      Key?key,
      required this.appBar,
-     this.title, 
+     this.title,
      this.onPress,
 
    }): super(key:key);
@@ -16,11 +16,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget  {
    final AppBar appBar;
    final String? title;
    final Function()? onPress;
-   
+
 
    @override
   Widget build(BuildContext context) {
     return AppBar(
+      elevation: 0,
+      shadowColor: AppColors.pinkGrade2,
       leading: IconButton(
         onPressed: onPress,
          icon: Icon(Icons.arrow_back, color: AppColors.pinkGrade2,),),
@@ -40,5 +42,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget  {
 
    @override
    Size get preferredSize => Size.fromHeight(appBar.preferredSize.height);
-   Size get preferredSizeWidth => Size.fromWidth(appBar.preferredSize.width);
+
 }

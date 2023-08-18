@@ -1,3 +1,4 @@
+import 'package:capsule/src/core/constants/assets.dart';
 import 'package:flutter/material.dart';
 import '../core/constants/dimensions.dart';
 import '../core/constants/font_weight.dart';
@@ -11,24 +12,28 @@ class CustomTextField extends StatelessWidget {
      this.suffixIcon,
      required this.obscure,
      required this.height,
-
+     this.controller,
+     this.onTap,
+     this.readOnly,
   }): super(key:key);
 
    final String labelText;
    final Image? prefixIcon;
    final dynamic suffixIcon;
    final bool obscure;
+   final bool? readOnly;
    final double height;
-
-  TextEditingController controller = TextEditingController();
+   final TextEditingController? controller;
+   final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          height: 50,
+          height: 85,
           child: TextFormField(
+            onTap: onTap,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             cursorColor: AppColors.pinkGrade2,
             controller: controller,
@@ -53,7 +58,65 @@ class CustomTextField extends StatelessWidget {
           ),
         ),
         CustomDivider(
-          height: height_15,
+          height: height,
+          isDivider: false,
+        ),
+      ],
+    );
+  }
+}
+
+
+
+
+class CustomTypeListField extends StatelessWidget {
+  CustomTypeListField({Key?key,
+    required this.labelText,
+    required this.height,
+    this.controller,
+    this.onTap,
+    this.prefixIcon,
+  }): super(key:key);
+
+  final String labelText;
+  final Image? prefixIcon;
+  final double height;
+  final TextEditingController? controller;
+  final Function()? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        InkWell(
+          onTap: onTap,
+          child: Container(
+            alignment: Alignment.centerLeft,
+            height: 65,
+            width: width_340,
+            decoration: BoxDecoration(
+              color: AppColors.pinkFillColor,
+                borderRadius: BorderRadius.circular(radius_10),
+                border: Border.all(color: AppColors.pinkGrade2),
+            ),
+            child: Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 12),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    labelText,
+                    style: TextStyle(color: AppColors.pinkGrade2, fontSize: font_12, fontWeight: fontWeight400, fontFamily: 'OpenSans'),
+                    textAlign: TextAlign.left,
+                  ),
+                  Image(image: AssetImage(ImgAssets.calendarIcon))
+                ],
+              ),
+            ),
+          ),
+        ),
+        CustomDivider(
+          height: height,
           isDivider: false,
         ),
       ],
